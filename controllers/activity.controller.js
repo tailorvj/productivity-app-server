@@ -7,7 +7,7 @@ const Activity = require("../models/activity.model");
  * @param res - the response object
  */
 const getActivities = async (req, res) => {
-  console.log("getActivities:", req.body);
+  // console.log("getActivities:", req.body);
   try {
     const activities = await Activity.find();
     res.status(200).json(activities);
@@ -22,7 +22,7 @@ const getActivities = async (req, res) => {
  * @param res - the response object
  */
 const addActivity = async (req, res) => {
-  console.log("addActivity:", req.body);
+  // console.log("addActivity:", req.body);
   const activity = new Activity(req.body);
 
   try {
